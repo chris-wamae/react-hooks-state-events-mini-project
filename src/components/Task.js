@@ -1,16 +1,11 @@
 import React from "react";
-//Add data that needs to be passed from TaskList as props
-function Task({category,text,handleDelete,getData}) {
-  function getData(){
-  handleDelete(text)
-  }
+function Task({text,category,deletedItem}) {
   return (
     <div className="task">
       <div className="label">{category}</div>
       <div className="text">{text}</div>
-      <button className="delete" onClick={getData}>X</button>
+      <button onClick={()=> deletedItem(text)} className="delete">X</button>
     </div>
   );
 }
-
 export default Task;
