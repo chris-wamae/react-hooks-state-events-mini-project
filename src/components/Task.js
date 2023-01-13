@@ -1,10 +1,11 @@
 import React from "react";
+//Add data that needs to be passed from TaskList as props
+function Task({category,text}) {
 
-function Task() {
   return (
     <div className="task">
-      <div className="label">CATEGORY HERE</div>
-      <div className="text">TEXT HERE</div>
+      <div className="label">{category}</div>
+      <div className="text">{text}</div>
       <button className="delete">X</button>
     </div>
   );
